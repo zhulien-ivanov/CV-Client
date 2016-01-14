@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "Frameworks \\\\ ";
+}
+
+<div id="main-wrapper" class="jumbotron row text-center">
+    <div id="framework-container" class="col-md-6 col-md-offset-3 canvas-container">
+
+    </div>
+</div>
+
+@section scripts {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+    <script src="~/Scripts/chartUtilities.js"></script>
+    <script src="~/Scripts/domUtilities.js"></script>
+    <script>
+        var frameworksRequestURL = "http://cv-api.apphb.com/api/frameworks/" + @ViewBag.FrameworkId,
+            $container = $('#framework-container');
+
+        domUtilities.getAndInsertCanvasGraphic(frameworksRequestURL, $container);
+    </script>
+}

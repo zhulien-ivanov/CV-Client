@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Experience \\\\ ";
+}
+
+<div id="main-wrapper" class="jumbotron row text-center">
+    <div id="languages-container" class="col-md-6 item-container">
+        <h2>Languages</h2>
+    </div>
+
+    <div id="frameworks-container" class="col-md-6 item-container">
+        <h2>Frameworks</h2>
+    </div>
+</div>
+
+@section scripts {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+    <script src="~/Scripts/domUtilities.js"></script>
+    <script>
+        var languagesRequestURL = "http://cv-api.apphb.com/api/languages/partial",
+            frameworksRequestURL = "http://cv-api.apphb.com/api/frameworks/partial",
+            $languagesContainer = $('#languages-container'),
+            $frameworksContainer = $('#frameworks-container');
+
+        domUtilities.getAndInsertItemsCollection(languagesRequestURL, $languagesContainer, '/languages/');
+        domUtilities.getAndInsertItemsCollection(frameworksRequestURL, $frameworksContainer, '/frameworks/');
+    </script>
+}

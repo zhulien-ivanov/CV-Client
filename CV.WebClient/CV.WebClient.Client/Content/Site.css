@@ -1,0 +1,52 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.item-container a {
+    color: #ff6a00;
+}
+
+    .item-container a:hover {
+        text-decoration: none;
+        color: #fff;
+    }
+
+        .item-container a:hover div {
+            background-color: #ff6a00;
+        }
+
+.canvas-container {
+    border: 2px dashed #ff6a00;
+}
+
+    .canvas-container:hover {
+        border: 2px solid #ff6a00;
+        background-color: #fff;
+    }
+
+    .canvas-container h3 {
+    }
+
+.icon {
+}
+
+.icon-container:hover {
+}
+
+canvas {
+    margin-top: 10%;
+}

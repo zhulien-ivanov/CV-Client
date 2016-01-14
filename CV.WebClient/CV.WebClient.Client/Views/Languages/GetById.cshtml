@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "Languages \\\\ ";
+}
+
+<div id="main-wrapper" class="jumbotron text-center">
+    <div id="language-info-wrapper" class="row">
+        <div id="language-container" class="col-md-6 col-md-offset-3 canvas-container">
+
+        </div>
+    </div>
+    <div id="frameworks-wrapper" class="item-container">
+        <h3>Frameworks</h3>
+        <div id="frameworks-container">
+
+        </div>
+    </div>
+</div>
+
+@section scripts {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+    <script src="~/Scripts/chartUtilities.js"></script>
+    <script src="~/Scripts/domUtilities.js"></script>
+    <script>
+        var languageRequestURL = "http://cv-api.apphb.com/api/languages/" + @ViewBag.LanguageId,
+            frameworksRequestURL = "http://cv-api.apphb.com/api/frameworks/bylang/" + @ViewBag.LanguageId + "/partial",
+            $languageContainer = $('#language-container'),
+            $frameworksContainer = $('#frameworks-container');
+
+        domUtilities.getAndInsertCanvasGraphic(languageRequestURL, $languageContainer);
+        domUtilities.getAndInsertItemsCollection(frameworksRequestURL, $frameworksContainer, '/frameworks/');
+    </script>
+}
