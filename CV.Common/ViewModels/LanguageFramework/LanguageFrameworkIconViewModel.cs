@@ -1,4 +1,4 @@
-﻿namespace CV.Common.ViewModels
+﻿namespace CV.Common.ViewModels.LanguageFramework
 {
     public class LanguageFrameworkIconViewModel
     {

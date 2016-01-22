@@ -2,7 +2,7 @@
 {
     using System.Collections.Generic;
 
-    using CV.Common.ViewModels;
+    using CV.Common.ViewModels.ProgrammingLanguage;
 
     public interface IProgrammingLanguageService
     {

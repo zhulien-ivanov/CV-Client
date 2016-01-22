@@ -112,14 +112,17 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CertificatesController.cs" />
     <Compile Include="Controllers\FrameworksController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LanguagesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructure\Contracts\ICertificatesService.cs" />
     <Compile Include="Infrastructure\Contracts\ILanguageFrameworkService.cs" />
     <Compile Include="Infrastructure\Contracts\IProgrammingLanguageService.cs" />
+    <Compile Include="Infrastructure\Services\CertificatesService.cs" />
     <Compile Include="Infrastructure\Services\LanguageFrameworkService.cs" />
     <Compile Include="Infrastructure\Services\ProgrammingLanguageService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -163,6 +166,7 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Languages\GetById.cshtml" />
     <Content Include="Views\Frameworks\GetById.cshtml" />
+    <Content Include="Views\Certificates\GetAll.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

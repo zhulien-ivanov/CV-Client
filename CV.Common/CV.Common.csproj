@@ -40,10 +40,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewModels\LanguageFrameworkDetailedViewModel.cs" />
-    <Compile Include="ViewModels\LanguageFrameworkIconViewModel.cs" />
-    <Compile Include="ViewModels\ProgrammingLanguageDetailedViewModel.cs" />
-    <Compile Include="ViewModels\ProgrammingLanguageIconViewModel.cs" />
+    <Compile Include="ViewModels\Certificate\CertificateViewModel.cs" />
+    <Compile Include="ViewModels\LanguageFramework\LanguageFrameworkDetailedViewModel.cs" />
+    <Compile Include="ViewModels\LanguageFramework\LanguageFrameworkIconViewModel.cs" />
+    <Compile Include="ViewModels\ProgrammingLanguage\ProgrammingLanguageDetailedViewModel.cs" />
+    <Compile Include="ViewModels\ProgrammingLanguage\ProgrammingLanguageIconViewModel.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

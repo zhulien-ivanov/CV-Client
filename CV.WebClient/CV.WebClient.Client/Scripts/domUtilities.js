@@ -59,8 +59,61 @@
         });
     }
 
+    function getAndInsertCertificates(requestURL, container) {
+        var $docFragment = $(document.createDocumentFragment());
+
+        $.ajax({
+            type: "GET",
+            url: requestURL
+        })
+        .done(function (certificates) {
+            var $docFragment = $(document.createDocumentFragment()),
+                certificatesCount = certificates.length,
+                columnLength = 3;
+
+            for (var i = 0; i < certificatesCount; i += 3) {
+                var $rowDiv = $('<div />');
+
+                $rowDiv.addClass('row');
+
+                if (certificatesCount - i < columnLength) {
+                    columnLength = certificatesCount - i;
+                }
+
+                for (var j = i; j < i + columnLength; j++) {
+                    var $columnDiv = $('<div />'),
+                        $anchor = $('<a />'),
+                        $heading = $('<h4 />'),
+                        $image = $('<img />');
+
+                    $columnDiv.addClass('col-md-4');
+
+                    $heading.text(certificates[j].Name);
+
+                    $image.attr('src', certificates[j].ImageLocation);
+                    $image.attr('alt', certificates[j].Name);
+
+                    $anchor.addClass('thumbnail');
+                    $anchor.attr('href', certificates[j].URL);
+
+                    $anchor.append($heading);
+                    $anchor.append($image);
+
+                    $columnDiv.append($anchor);
+
+                    $rowDiv.append($columnDiv);
+                }
+
+                $docFragment.append($rowDiv);
+            }
+
+            container.append($docFragment);
+        });
+    }
+
     return {
         getAndInsertItemsCollection: getAndInsertItemsCollection,
-        getAndInsertCanvasGraphic: getAndInsertCanvasGraphic
+        getAndInsertCanvasGraphic: getAndInsertCanvasGraphic,
+        getAndInsertCertificates: getAndInsertCertificates
     };
 })();

@@ -50,3 +50,13 @@ textarea {
 canvas {
     margin-top: 10%;
 }
+
+a.thumbnail {
+    text-decoration: none;
+    margin: 25px 0px;
+}
+
+a.thumbnail h4 {
+    color: #ff6a00;
+    font-weight: bold;
+}

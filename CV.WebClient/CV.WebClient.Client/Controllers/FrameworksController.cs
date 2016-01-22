@@ -4,7 +4,7 @@
 
     public class FrameworksController : Controller
     {
-        [Route("frameworks/{id:int}")]
+        [Route("Frameworks/{id:int}")]
         public ActionResult GetById(int id)
         {
             ViewBag.FrameworkId = id;

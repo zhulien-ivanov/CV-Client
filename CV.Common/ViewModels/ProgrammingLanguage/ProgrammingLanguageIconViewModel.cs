@@ -1,4 +1,4 @@
-﻿namespace CV.Common.ViewModels
+﻿namespace CV.Common.ViewModels.ProgrammingLanguage
 {
     public class ProgrammingLanguageIconViewModel
     {

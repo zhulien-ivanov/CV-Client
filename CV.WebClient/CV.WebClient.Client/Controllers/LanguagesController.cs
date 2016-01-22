@@ -4,7 +4,7 @@
 
     public class LanguagesController : Controller
     {
-        [Route("languages/{id:int}")]
+        [Route("Languages/{id:int}")]
         public ActionResult GetById(int id)
         {
             ViewBag.LanguageId = id;

@@ -6,7 +6,7 @@
 
     using Newtonsoft.Json;
 
-    using CV.Common.ViewModels;
+    using CV.Common.ViewModels.LanguageFramework;
 
     using CV.WebClient.Client.Infrastructure.Contracts;
 

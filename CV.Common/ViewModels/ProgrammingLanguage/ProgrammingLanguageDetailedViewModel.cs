@@ -1,6 +1,6 @@
-﻿namespace CV.Common.ViewModels
+﻿namespace CV.Common.ViewModels.ProgrammingLanguage
 {
-    public class LanguageFrameworkDetailedViewModel
+    public class ProgrammingLanguageDetailedViewModel
     {
         public int Id { get; set; }
 

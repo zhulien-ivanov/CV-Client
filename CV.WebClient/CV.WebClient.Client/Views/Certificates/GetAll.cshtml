@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = "Certificates \\\\ ";
+}
+
+<div id="gallery-wrapper" class="jumbotron text-center">
+</div>
+
+
+@section scripts {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>    
+    <script src="~/Scripts/domUtilities.js"></script>
+    <script>
+        var certificatesRequestURL = "http://cv-api.apphb.com/api/certificates/",
+            $container = $('#gallery-wrapper');
+
+        domUtilities.getAndInsertCertificates(certificatesRequestURL, $container);
+    </script>
+}
